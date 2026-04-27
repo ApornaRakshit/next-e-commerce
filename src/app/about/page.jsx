@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { FaGift } from "react-icons/fa6";
-import { IoPeople } from "react-icons/io5";
+
 
 const Page = () => {
   return (
@@ -78,7 +78,7 @@ const Page = () => {
             <p className="mt-2 text-sm">Gift Cards</p>
           </div>
           <div className="bg-gray-100 p-4 rounded">
-            <IoPeople />
+            
             <p className="mt-2 text-sm">Membership</p>
           </div>
           <div className="bg-gray-100 p-4 rounded">
