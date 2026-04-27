@@ -2,10 +2,13 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../../firebase";
 
 export default function Login() {
+    const router = useRouter();
+
     const [form, setForm] = useState({
         email: "",
         password: "",
@@ -21,7 +24,7 @@ export default function Login() {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); // 🔥 prevent page reload
+        e.preventDefault();
 
         if (!form.email || !form.password) {
             alert("Please fill all fields");
@@ -38,7 +41,10 @@ export default function Login() {
             );
 
             console.log("User:", userCredential.user);
-            alert("Login Successful!");
+
+            // ✅ Redirect to home page
+            router.replace("/");
+
         } catch (error) {
             alert(error.message);
         } finally {
@@ -106,7 +112,10 @@ export default function Login() {
                 {/* Register */}
                 <p className="mt-6 text-center text-sm text-gray-600">
                     Don’t have an account?{" "}
-                    <Link href="/register" className="text-[#c47a2c] font-semibold hover:underline">
+                    <Link
+                        href="/register"
+                        className="text-[#c47a2c] font-semibold hover:underline"
+                    >
                         Register
                     </Link>
                 </p>
