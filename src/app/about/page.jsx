@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { FaGift } from "react-icons/fa6";
+
 
 
 const Page = () => {
@@ -10,7 +10,7 @@ const Page = () => {
       {/* Heading */}
       <div className="text-center mb-12">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
-          About E-Bazar
+          About New Arrivals
         </h1>
         <p className="text-gray-500 mt-3 max-w-2xl mx-auto">
           Your trusted online marketplace for smart, fast, and reliable shopping.
@@ -27,7 +27,7 @@ const Page = () => {
           </h2>
 
           <p className="text-center text-gray-600 mt-4 leading-relaxed">
-            E-Bazar is a modern e-commerce platform designed to simplify your
+            E-commerce is a modern e-commerce platform designed to simplify your
             shopping experience. We bring together a wide range of products,
             trusted sellers, and smart features to help you shop efficiently and
             confidently.
@@ -74,7 +74,7 @@ const Page = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
           <div className="bg-gray-100 p-4 rounded">
-            <FaGift />
+            
             <p className="mt-2 text-sm">Gift Cards</p>
           </div>
           <div className="bg-gray-100 p-4 rounded">
